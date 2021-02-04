@@ -22,14 +22,20 @@ public class Universe {
               System.out.println("太阳吸引着九大行星");
           }
       }
+    private static class Test{
+          void test()
+          {
+              Universe u=new Universe();
+              Star star=u.new Star();
+              star.shine();
+              Star sun=u.new Sun();
+              sun.shine();
+              ((UNIVERSE) sun).doAnything();
+          }
 
+    }
     public static void main(String[] args) {
-          Universe u=new Universe();
-          Star star=u.new Star();
-          star.shine();
-          Star sun=u.new Sun();
-          sun.shine();
-        ((UNIVERSE) sun).doAnything();
+         new  Test().test();
 
     }
 }
