@@ -77,11 +77,17 @@ public class Animal_Cure {
             System.out.println("症状为:"+symptom);
         }
     }
+   private static class Test{
+        void test()
+        {
+            Animal_Cure animal=new Animal_Cure();
+            Duck duck=animal.new Duck("Duck","感冒","发烧",4);
+            duck.showMsg();
+            duck.showSymptom();
+        }
 
+   }
     public static void main(String[] args) {
-        Animal_Cure animal=new Animal_Cure();
-         Duck duck=animal.new Duck("Duck","感冒","发烧",4);
-         duck.showMsg();
-         duck.showSymptom();
+       new Test().test();
     }
 }
