@@ -46,13 +46,19 @@ public class Vehicles {
             else System.out.println();
         }
     }
+    private class Test{
+        private void test()
+        {
+            Vehicles v=new Vehicles();
+            Car car=v.new Car("小汽车",1150,4,6,3);
+            Truck truck=v.new Truck("大卡车",15000,8,1,3,5000,3000);
+            car.showInfo();
+            System.out.println("==============================================");
+            truck.showInfo();
+        }
+    }
     public static void main(String[] args) {
-        Vehicles v=new Vehicles();
-        Car car=v.new Car("小汽车",1150,4,6,3);
-        Truck truck=v.new Truck("大卡车",15000,8,1,3,5000,3000);
-        car.showInfo();
-        System.out.println("==============================================");
-        truck.showInfo();
+        new Vehicles().new Test().test();
 
     }
 }
