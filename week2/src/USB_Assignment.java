@@ -8,36 +8,36 @@ public class USB_Assignment{
     public class Mouse implements USB{
         @Override
         public void turnOff() {
-            System.out.println("叮咚,鼠标启动了");
+            System.out.println("叮咚,鼠标关闭了");
         }
 
         @Override
         public void turnOn() {
-            System.out.println("叮咚,鼠标关机了");
+            System.out.println("叮咚,鼠标启动了");
         }
     }
 
     public class KeyBoard implements USB{
         @Override
         public void turnOff() {
-            System.out.println("叮咚,键盘启动了");
+            System.out.println("叮咚,键盘关机了");
         }
 
         @Override
         public void turnOn() {
-            System.out.println("叮咚,键盘关机了");
+            System.out.println("叮咚,键盘启动了");
         }
     }
 
     public class Microphone implements USB{
         @Override
         public void turnOff() {
-            System.out.println("叮咚,麦克风启动了");
+            System.out.println("叮咚,麦克风关机了");
         }
 
         @Override
         public void turnOn() {
-            System.out.println("叮咚,麦克风关机了");
+            System.out.println("叮咚,麦克风启动了");
         }
     }
     public class Computer {
@@ -59,7 +59,7 @@ public class USB_Assignment{
             System.out.println("计算器关闭成功!");
         }
     }
-    private class Test{
+    private  class Test{
         void test()
         {
             Computer computer=new Computer();
