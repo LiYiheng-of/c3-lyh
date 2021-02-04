@@ -46,7 +46,7 @@ public class Vehicles {
             else System.out.println();
         }
     }
-    private class Test{
+    private static class Test{
         private void test()
         {
             Vehicles v=new Vehicles();
@@ -58,7 +58,7 @@ public class Vehicles {
         }
     }
     public static void main(String[] args) {
-        new Vehicles().new Test().test();
+        new Test().test();
 
     }
 }
