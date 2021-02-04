@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Animal_Cure {
     public abstract class Poultry{
         protected String name,illness,symptom;
@@ -48,39 +50,38 @@ public class Animal_Cure {
             return age;
         }
 
-        public void showSymptom()
+        public abstract void showSymptom();
+
+        public void showMsg()
         {
-            System.out.println("症状为:"+symptom);
+            System.out.println("动物种类: "+name+"  年龄: "+age);
+            System.out.println("病因: "+illness);
         }
 
-        public abstract void showMsg();
-
     }
-    public class Duck extends Poultry{
+    public  class Duck extends Poultry{
         public Duck(String name, String illness, String symptom, int age) {
             super(name, illness, symptom, age);
         }
 
         public Duck() {
-            this.name="Duck";
-            this.illness="NULL";
-            this.symptom="NULL";
-            this.age=-1;
+            this.name = "Duck";
+            this.illness = "NULL";
+            this.symptom = "NULL";
+            this.age = -1;
         }
 
         @Override
-        public void showMsg()
-            {
-                System.out.println("动物种类: "+name+"  年龄: "+age);
-                System.out.println("病因: "+illness);
-                showSymptom();
-            }
+        public void showSymptom()
+        {
+            System.out.println("症状为:"+symptom);
+        }
     }
 
     public static void main(String[] args) {
         Animal_Cure animal=new Animal_Cure();
          Duck duck=animal.new Duck("Duck","感冒","发烧",4);
          duck.showMsg();
-
+         duck.showSymptom();
     }
 }
