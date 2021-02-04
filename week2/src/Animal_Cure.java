@@ -1,5 +1,5 @@
 public class Animal_Cure {
-    public class Poultry{
+    public abstract class Poultry{
         protected String name,illness,symptom;
         protected int age;
 
@@ -53,12 +53,7 @@ public class Animal_Cure {
             System.out.println("症状为:"+symptom);
         }
 
-        public void showMsg()
-        {
-            System.out.println("动物种类: "+name+"  年龄: "+age);
-            System.out.println("病因: "+illness);
-            showSymptom();
-        }
+        public abstract void showMsg();
 
     }
     public class Duck extends Poultry{
@@ -72,13 +67,19 @@ public class Animal_Cure {
             this.symptom="NULL";
             this.age=-1;
         }
+
+        @Override
+        public void showMsg()
+            {
+                System.out.println("动物种类: "+name+"  年龄: "+age);
+                System.out.println("病因: "+illness);
+                showSymptom();
+            }
     }
 
     public static void main(String[] args) {
         Animal_Cure animal=new Animal_Cure();
-         Poultry chicken=animal.new Poultry("chicken","感冒","发烧",5);
-         Duck duck=animal.new Duck("Duck","拉肚子","蹿稀",4);
-         chicken.showMsg();
+         Duck duck=animal.new Duck("Duck","感冒","发烧",4);
          duck.showMsg();
 
     }
