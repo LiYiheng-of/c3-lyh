@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class ReverseInteger {
-    long temp;
-    long ans;
+    long  temp;
+    long  ans;
     Scanner in=new Scanner(System.in);
     void input()
     {
         System.out.println("Please a number:");
-        temp=(long) in.nextInt();
+        temp=in.nextLong();
     }
     void solve()
     {
@@ -16,7 +16,7 @@ public class ReverseInteger {
             ans=ans*10+temp%10;
             temp/=10;
         }
-        if(ans<-2147483648||ans>2147483647) ans=-1;
+        if(ans<-2147483648L||ans>2147483467L) ans=-1;//用long可以避免使用数组来存储值
     }
     void output()
     {
