@@ -20,7 +20,7 @@ public class Assignment {
     }
         public static void main(String[] args) throws Exception{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3305/test","root","root");
+            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3305/test?characterEncoding=utf-8","root","root");
             Statement statement=connection.createStatement();
             String sql="DROP TABLE IF EXISTS student;\n";
             statement.executeUpdate(sql);
